@@ -1,4 +1,4 @@
-#Atom Black UI
+# Atom Black UI
 
 A truly black UI theme for Atom. It is based on Atom Dark but with a truly black background. It works best with Atom Black Syntax theme [http://atom.io/packages/atom-black-syntax/] here.
 
