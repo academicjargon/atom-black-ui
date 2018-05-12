@@ -1,8 +1,13 @@
 # Atom Black UI
-A truly black UI theme for Atom. It is based on Atom Dark but with a truly black background. It works best with Atom Black Syntax theme http://atom.io/packages/atom-black-syntax/ here.
+A truly black high-contrast UI theme for Atom. It is based on Atom Dark but with a truly black background. It works best with Atom Black Syntax theme http://atom.io/packages/atom-black-syntax/ here.
 
 ## Terminal Styling ##
-Instructions for the below are here: https://github.com/academicjargon/bash-profiles
+I've also built out some Atom-Black-compatible terminal and terminal emulator styles for Mac and PC.
+The mac terminal style is basically the Smyck.terminal styles.
+The PC terminal emulator styles for Bash and Shell are similar to Smyck but built separately.
+High-level Instructions for installing these are here: https://github.com/academicjargon/bash-profiles
+Direct links to these profiles are below.
+I'll provide better, beginning-to-end instructions in the future.
 
 ### PC Terminal Emulator Styles ###
 Also, if you are on a PC and have ConEmu, you can also download an
