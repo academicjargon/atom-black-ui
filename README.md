@@ -4,8 +4,8 @@ A truly black UI theme for Atom. It is based on Atom Dark but with a truly black
 
 Also, if you are on a PC and have ConEmu, you can also download an Atom Black-compatible shell terminal emulator style [https://github.com/academicjargon/bash-profiles] here.
 
-![A screenshot of your theme](https://github.com/academicjargon/atom-black-ui/blob/master/atom-black-ui.png)
+![Atom Black UI Screenshot 1](https://github.com/academicjargon/pictures/blob/master/atom-black-ui.png)
 
-![A screenshot of your theme](https://github.com/academicjargon/atom-black-ui/blob/master/atom-black-ui2.png)
+![Atom Black UI Screenshot 2](https://github.com/academicjargon/pictures/blob/master/atom-black-ui2.png)
 
 Enjoy! 🚀
