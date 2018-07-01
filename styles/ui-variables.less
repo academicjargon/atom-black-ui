@@ -1,14 +1,25 @@
-// Colors
 
-@text-color: #aaa;
-@text-color-subtle: #555;
-@text-color-highlight: #fff;
-@text-color-selected: @text-color-highlight;
+// UI Variables
+// -------------------
 
-@text-color-info: #5293d8;
-@text-color-success: #2BDA77;
-@text-color-warning: #ff982d;
-@text-color-error: #c00;
+// These are the official UI variables that every UI theme should define.
+// It allows other packages to match your theme.
+
+// Overrides: atom/static/variables/ui-variables.less
+
+// Try to edit some of the values below to see your theme change.
+// A good start is to change the color of the `@base-background-color` variable.
+
+// Text Colors
+@text-color:           hsl(0,0%,66%);
+@text-color-subtle:    hsl(0,0%,50%); //Might try #555 or 33%
+@text-color-highlight: hsl(0,0%,94%); //94=light gray. Might try white.
+@text-color-selected:  hsl(0,0%,100%); //or fff
+
+@text-color-info:    hsl(210, 62%, 84%); //was hsl(219,  79%, 66%); or 5293d8
+@text-color-success: hsl(146, 80%, 85%); //hsl(140,  44%, 62%); or 2BDA77
+@text-color-warning: hsl( 30, 82%, 100%); //hsl( 36,  60%, 72%); or ff982d
+@text-color-error:   hsl(  0, 100%, 80%); //hsl(  9, 100%, 64%); or c00
 
 @text-color-ignored: @text-color-subtle;
 @text-color-added: @text-color-success;
@@ -16,62 +27,64 @@
 @text-color-modified: @text-color-warning;
 @text-color-removed: @text-color-error;
 
-@background-color-info: #0098ff;
-@background-color-success: #17ca65;
-@background-color-warning: #ffaa2c;
-@background-color-error: #c00;
-@background-color-highlight: rgba(255, 255, 255, 0.07);
-@background-color-selected: #4182C4;
+// Background colors
+@background-color-info:    hsl(0, 152%, 255%); //hsl(208, 100%, 50%); //0098ff
+@background-color-success: hsl(145,  88%, 79%); //hsl(160,  70%, 36%); //17ca65
+@background-color-warning: hsl(35,   82%, 100%); //hsl(32,   60%, 50%); //ffaa2c
+@background-color-error:   hsl(0,   100%, 80%); //hsl(0,    70%, 50%); //c00
 
-@app-background-color: #000;
+@background-color-highlight: rgba(255, 255, 255, 0.07); //lighten(@base-background-color, 5%);
+@background-color-selected:  #4182C4; //lighten(@base-background-color, 10%);
+@app-background-color:       #000000; //darken(@base-background-color, 5%);
 
-@base-background-color: darken(@tool-panel-background-color, 5%);
-@base-border-color: rgba(0, 0, 0, 1);
+// Base colors
+@base-background-color: hsl(000,100%,0%);
+@base-border-color:     darken(@base-background-color, 8%);
 
+// Component colors
 @pane-item-background-color: @base-background-color;
-@pane-item-border-color: rgba(0, 0, 0, 1);
+@pane-item-border-color:     @base-border-color;
 
-@input-background-color: #212224; //Behind input fields //Was #212224;
-@input-border-color: @base-border-color;
+@input-background-color: #212224; //@app-background-color;
+@input-border-color:     @base-border-color;
 
-@tool-panel-background-color: #000; //Was 1d1f21
-@tool-panel-border-color: @base-border-color;
+@tool-panel-background-color: @base-background-color;
+@tool-panel-border-color:     @base-border-color;
 
-@inset-panel-background-color: #000; //#161719;
-@inset-panel-border-color: @base-border-color;
+@inset-panel-background-color: #000; //lighten(@base-background-color, 4%);
+@inset-panel-border-color:     @base-border-color;
 
-@panel-heading-background-color: #000; //was #43484d;
-@panel-heading-border-color: fadein(@base-border-color, 10%);
+@panel-heading-background-color: #000; //was lighten(@base-background-color, 4%);
+@panel-heading-border-color:     fadein(@base-border-color, 10%); //@base-border-color;
 
-@overlay-background-color: #000; //was #202123;
-@overlay-border-color: @background-color-highlight;
+@overlay-background-color: #000; //waslighten(@base-background-color, 5%);
+@overlay-border-color:     @background-color-highlight; //@base-border-color;
 
-@button-background-color: #212224; //Behind dropdowns //was #43484d;
-@button-background-color-hover: lighten(@button-background-color, 5%);
-@button-background-color-selected: #000; //was #5c6064;
-@button-border-color: @base-border-color; // Was: @base-border-color;
+@button-background-color:          #212224; //lighten(@base-background-color, 10%);
+@button-background-color-hover:    lighten(@button-background-color, 5%); //lighten(@button-background-color, 12%);
+@button-background-color-selected: #000; //@button-background-color-hover;
+@button-border-color:              @base-border-color;
 
-@tab-bar-background-color: #222; //Behind tabs //Behind tabs //was #222; //0cf is nice
-@tab-bar-border-color: darken(@tab-background-color-active, 10%);
-@tab-background-color: #000; //was #333;
-@tab-background-color-active: #222; //was #222;
-@tab-border-color: #484848;
+@tab-bar-background-color:    #000; //Behind tabs //Behind tabs //was #222; //0cf is nice //was: @base-background-color;
+@tab-bar-border-color:        #000; //darken(@tab-background-color-active, 10%); //@base-border-color;
+@tab-background-color:        #232323; // @tab-bar-background-color;
+@tab-background-color-active: #000; //lighten(@tab-bar-background-color, 10%);
+@tab-border-color:            #000; //@base-border-color;
 
-@tree-view-background-color: #000; //was #303030;
-@tree-view-border-color: @tool-panel-border-color;
+@tree-view-background-color: @base-background-color;
+@tree-view-border-color:     @base-border-color;
 
 @scrollbar-background-color: #000; //was #222425; // Needs to be opaque -> atom/atom/issues/4578
 @scrollbar-color: rgba(92, 92, 92, 0.5);
 
-@ui-site-color-1: @background-color-success; // green
-@ui-site-color-2: @background-color-info; // blue
-@ui-site-color-3: @background-color-warning; // orange
-@ui-site-color-4: #db2ff4; // purple
-@ui-site-color-5: #f5e11d; // yellow
-
+// Site colors
+@ui-site-color-1: @background-color-success; // green was: hsl(208, 100%, 50%); // blue
+@ui-site-color-2: @background-color-info; // blue was: hsl(160,  70%, 42%); // green
+@ui-site-color-3: @background-color-warning; // orange was: hsl(32,   60%, 50%); // orange
+@ui-site-color-4: #db2ff4; // purple was: #D831B0;             // pink
+@ui-site-color-5: #f5e11d; // yellow was: #EBDD5B;             // yellow
 
 // Sizes
-
 @font-size: 11px;
 @input-font-size: 14px;
 
@@ -83,9 +96,8 @@
 @component-line-height: 25px;
 @component-border-radius: 2px;
 
-@tab-height: 32px;
+@tab-height: 4rem;
 
-
-// Other
-
-@font-family: system-ui;
+// Misc
+@component-border-radius: 2px;
+@font-family: system-ui, '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
