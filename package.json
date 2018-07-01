@@ -1,7 +1,7 @@
 {
   "name": "atom-black-ui",
   "theme": "ui",
-  "version": "0.15.0",
+  "version": "0.16.0",
   "description": "A truly black high-contrast UI theme to go with Atom Black Syntax theme",
   "keywords": [
     "ui",
