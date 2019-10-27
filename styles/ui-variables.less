@@ -1,6 +1,22 @@
+// UI colors
+@dark-blue: #010111; // rgb(1,1,17);
+// colors
+@nice-yellow: rgb(48,100%,50%); // #fc0; // Nice Yellow same as orange rich
+@nice-yellow-muted: darken(@nice-yellow, 25%); // Nice Yellow same as orange rich
+@nice-yellow-very-muted: darken(@nice-yellow, 40%); // Nice Yellow same as orange rich
+@nice-teal: hsl(170, 100%, 50%); // #00ffd5; // hsl(170.1,100%,50%)
+@nice-teal-muted: darken(@nice-teal, 25%); // #00806a // hsl(170.1,100%,25.1%) // Nice Yellow same as orange rich
+@nice-teal-very-muted: darken(@nice-teal, 43%); // rgb(0,36,30) // hsl(170.1,100%,7.1%) // Nice Yellow same as orange rich
+@nicer-teal-muted: hsl(60,17.6%,18%); // rgb(100,100,70); // #646446 // hsl(60,17.6%,33.3%); hunter green really.
+@orange: #fc0;
+@white: #fff;
+@black: #000;
 // UI Variables
+@search-area: #fc0;
+@search-box: #000;
+@search-box-text: #fff;
 @text-color: hsl(0,0%,66%);
-@text-color-subtle: hsl(0,0%,50%); //Might try #555 or 33%
+@text-color-subtle: hsl(0,0%,50%); //Might try #555 or 33% // Placeholder in "Replace in current folder"
 @text-color-highlight: hsl(0,0%,94%); //94=light gray. Might try white.
 @text-color-selected: hsl(0,0%,100%); //or fff
 @text-color-info: #5293d8;
@@ -19,17 +35,17 @@
 @background-color-error: hsl(0,   100%, 80%); //hsl(0,    70%, 50%); //c00
 @background-color-highlight: rgba(255, 255, 255, 0.07); //lighten(@base-background-color, 5%);
 @background-color-selected: #4182C4; //lighten(@base-background-color, 10%);
-@app-background-color: #000000; //darken(@base-background-color, 5%);
-@app-background-color-contrasted: #212224;
+@app-background-color: @black; //darken(@base-background-color, 5%); //Background of the ui area
+@app-background-color-contrasted: #212226; // Main tab unselected. And background of find and replace
 @base-background-color: @app-background-color;
 @base-border-color: @base-background-color;
 // Component colors
 @pane-item-background-color: @base-background-color;
 @pane-item-border-color: @base-border-color;
 @input-background-color: @app-background-color-contrasted; //@app-background-color;
-@input-border-color: @base-border-color;
+@input-border-color: @nice-teal-very-muted; // @base-border-color;
 @tool-panel-background-color: @base-background-color;
-@tool-panel-border-color: @base-border-color;
+@tool-panel-border-color: @nice-teal-very-muted; // @base-border-color;
 @inset-panel-background-color: @app-background-color; //lighten(@base-background-color, 4%);
 @inset-panel-border-color: @base-border-color;
 @panel-heading-background-color: @app-background-color; //was lighten(@base-background-color, 4%);
@@ -40,15 +56,16 @@
 @button-background-color-hover: lighten(@button-background-color, 5%); //lighten(@button-background-color, 12%);
 @button-background-color-selected: @app-background-color; //@button-background-color-hover;
 @button-border-color: @base-border-color;
-@tab-bar-background-color: @app-background-color; //Behind tabs //Behind tabs //was #222; //0cf is nice //was: @base-background-color;
-@tab-bar-border-color: @app-background-color; //darken(@tab-background-color-active, 10%); //@base-border-color;
+@tab-bar-background-color: #001; // @app-background-color; //Behind tabs //Behind tabs //was #222; //0cf is nice //was: @base-background-color;
+@tab-bar-border-color: #fc0; //@app-background-color; //darken(@tab-background-color-active, 10%); //@base-border-color;
 @tab-background-color: @app-background-color-contrasted; // @tab-bar-background-color;
 @tab-background-color-active: @app-background-color; //lighten(@tab-bar-background-color, 10%);
 @tab-border-color: @app-background-color; //@base-border-color;
 @tree-view-background-color: @base-background-color;
 @tree-view-border-color: @base-border-color;
 @scrollbar-background-color: @app-background-color; //was #222425; // Needs to be opaque -> atom/atom/issues/4578
-@scrollbar-color: rgba(92, 92, 92, 0.5);
+@scrollbar-color: #fc0; // rgba(92, 92, 92, 0.5);
+@x-button: @white;
 // Site colors
 @ui-site-color-1: @background-color-success; // green was: hsl(208, 100%, 50%); // blue
 @ui-site-color-2: @background-color-info; // blue was: hsl(160,  70%, 42%); // green

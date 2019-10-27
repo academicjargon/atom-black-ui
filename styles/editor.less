@@ -7,6 +7,7 @@ atom-text-editor[mini] {
   color: @text-color;
   border-radius: @component-border-radius;
   background-color: @input-background-color;
+  border-bottom: 1px solid @input-border-color;
   &.is-focused {
     background-color: darken(@input-background-color, 5%);
   }
@@ -22,4 +23,7 @@ atom-text-editor[mini] {
     padding-left: 8px !important;
     padding-right: 8px !important;
     cursor: pointer;
+}
+.icon.icon-x::before {
+  color:@x-button;
 }
