@@ -56,16 +56,18 @@
 @button-background-color-hover: lighten(@button-background-color, 5%); //lighten(@button-background-color, 12%);
 @button-background-color-selected: @app-background-color; //@button-background-color-hover;
 @button-border-color: @base-border-color;
-@tab-bar-background-color: #001; // @app-background-color; //Behind tabs //Behind tabs //was #222; //0cf is nice //was: @base-background-color;
-@tab-bar-border-color: #fc0; //@app-background-color; //darken(@tab-background-color-active, 10%); //@base-border-color;
-@tab-background-color: @app-background-color-contrasted; // @tab-bar-background-color;
-@tab-background-color-active: @app-background-color; //lighten(@tab-bar-background-color, 10%);
+@tab-bar-background-color: @base-background-color; //Behind tabs //Behind tabs //was #222; //0cf is nice //was: @base-background-color;
+@tab-background-color: @app-background-color-contrasted; // @tab-bar-background-color; // Other open tabs.
+@tab-background-color-active: @app-background-color; //lighten(@tab-bar-background-color, 10%); // The active tabs
 @tab-border-color: @app-background-color; //@base-border-color;
+@tab-bar-border-color: #fc0; // @app-background-color; //darken(@tab-background-color-active, 10%); //@base-border-color;
+@text-color-info: #fc0;
 @tree-view-background-color: @base-background-color;
 @tree-view-border-color: @base-border-color;
 @scrollbar-background-color: @app-background-color; //was #222425; // Needs to be opaque -> atom/atom/issues/4578
 @scrollbar-color: #fc0; // rgba(92, 92, 92, 0.5);
 @x-button: @white;
+@doc-resize-handle: #320;
 // Site colors
 @ui-site-color-1: @background-color-success; // green was: hsl(208, 100%, 50%); // blue
 @ui-site-color-2: @background-color-info; // blue was: hsl(160,  70%, 42%); // green

@@ -22,3 +22,14 @@ atom-panel.modal {
   border-top: none;
   box-shadow: 0 2px 8px 1px hsla(0,0%,0%,.3);
 }
+// Styles the thin border left of line numbers. Don't know why we did.
+.atom-dock-resize-handle {
+    cursor: col-resize;
+    border-right: 1px solid @doc-resize-handle;
+}
+.atom-dock-toggle-button-inner {
+    background-color: #111;
+    border: 1px none #111;
+    color:#fc0;
+    transition: transform 0.1s ease-out 0s;
+}
